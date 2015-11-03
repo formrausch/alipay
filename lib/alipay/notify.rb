@@ -24,7 +24,7 @@ module Alipay
     private
 
     def self.verify_notify_id?(notify_id)
-      open("https://mapi.alipay.com/gateway.do?service=notify_verify&partner=#{Alipay.pid}&notify_id=#{CGI.escape(notify_id.to_s)}").read == 'true'
+      open("https://mapi-hk.alipay.com/gateway.do?service=notify_verify&partner=#{Alipay.pid}&notify_id=#{CGI.escape(notify_id.to_s)}").read == 'true'
     end
   end
 end
